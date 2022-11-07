@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>マインスイーパー</title>
+    <meta charset="UTF-8" />
+    <script type="module" src="src/index.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="button-container">
+        <button id="pointer" class="mode-button active">
+          <img src="./assets/pointer.png" width="30" height="30" />
+        </button>
+        <button id="flag" class="mode-button">
+          <img src="./assets/flag.png" width="30" height="30" />
+        </button>
+      </div>
+      <div class="bomb-count-container">
+        💣
+        <span id="bomb-count"></span>
+      </div>
+      <div id="board">
+        <div id="gameover" style="display: none">
+          <h1 id="gameover-title"></h1>
+          <button id="restart">リスタート</button>
+        </div>
+        <div id="overlay" style="display: none"></div>
+      </div>
+    </div>
+  </body>
+</html>

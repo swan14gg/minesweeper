@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#app {
+  padding: 1rem;
+}
+
+.button-container {
+  margin-bottom: 1rem;
+}
+
+.button-container button:first-child {
+  margin-right: 0.5rem;
+}
+
+.bomb-count-container {
+  margin-bottom: 1rem;
+}
+
+.mode-button {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid royalblue;
+  padding: 0.3rem;
+}
+
+.mode-button.active {
+  background-color: lightsteelblue;
+}
+
+.mode-button:hover {
+  background-color: lightsteelblue;
+}
+
+#board {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+}
+
+#gameover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding: 1rem;
+  background-color: rgb(255, 255, 255, 0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#gameover h1 {
+  margin: 0 0 1rem 0;
+}
+
+#gameover button {
+  padding: 1rem;
+  width: 100%;
+  font-weight: bold;
+  background-color: white;
+  background-color: rgb(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+#gameover button:hover {
+  background-color: aliceblue;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+}
+
+.block {
+  border: 1px solid black;
+  background-color: silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.block.c1 {
+  color: blue;
+}
+
+.block.c2 {
+  color: green;
+}
+
+.block.c3 {
+  color: orange;
+}
+
+.block.c4 {
+  color: purple;
+}
+
+.block.c5,
+.block.c6,
+.block.c7,
+.block.c8 {
+  color: red;
+}
+
+.block:not(:first-child) {
+  border-left: none;
+}
+
+.block.show {
+  background-color: white;
+}
+
+.block.flag {
+  background-image: url("../assets/flag.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
