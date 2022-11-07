@@ -1,6 +1,6 @@
 const WIDTH = 20;
 const HEIGHT = 20;
-const BOMB = 3;
+const BOMB = 80;
 
 const blocks = [];
 
