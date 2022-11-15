@@ -142,6 +142,7 @@ function handleClick(event) {
   }
   openBlock(block, blockX, blockY, true);
   checkClear();
+  bombCount.textContent = BOMB - document.querySelectorAll('.flag').length;
 }
 
 function openBlock(block, x, y, checkBomb) {
@@ -150,7 +151,7 @@ function openBlock(block, x, y, checkBomb) {
   block.classList.remove('flag');
   if (checkBomb && blocks[x][y].bomb) {
     block.textContent = '💣';
-    toGameover('GAME OVER');
+    toGameover('GAMEOVER');
     return;
   }
   if (blocks[x][y].count > 0) {
@@ -180,11 +181,11 @@ function checkClear() {
     results.push(...blocks[i].filter((block) => !block.bomb && !block.show));
     if (results.length > 0) return;
   }
-  toGameover('GAME CLEAR');
+  toGameover('GAMECLEAR');
 }
 
 function toGameover(title) {
-  gameover.style.display = 'block';
+  gameover.style.display = 'flex';
   overlay.style.display = 'block';
   gameoverTitle.textContent = title;
 }
