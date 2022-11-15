@@ -140,7 +140,7 @@ function handleClick(event) {
     setBombs(blockX, blockY);
     isFirstClick = false;
   }
-  openBlock(block, blockX, blockY, false);
+  openBlock(block, blockX, blockY, true);
   checkClear();
 }
 
