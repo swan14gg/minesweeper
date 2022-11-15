@@ -137,6 +137,10 @@ body {
   border-left: none;
 }
 
+.row:not(:last-of-type) .block {
+  border-bottom: none;
+}
+
 .block.show {
   background-color: white;
 }
